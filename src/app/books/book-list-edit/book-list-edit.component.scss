@@ -1,0 +1,16 @@
+.book-list-edit {
+  display: flex;
+  flex-direction: row;
+  div {
+    flex-grow: 1;
+  }
+  app-book-edit {
+    flex-grow: 3;
+  }
+}
+.book-edit-button {
+  margin-left: 1em;
+}
+.selected {
+  background-color: lightblue;
+}

@@ -1,0 +1,15 @@
+<section class="mat-typography">
+  <div><a mat-fab routerLink="/"><mat-icon>home</mat-icon></a></div>
+  <div class="book-list-edit">
+    <div>
+      <mat-list>
+        <mat-list-item *ngFor="let book of books" [class.selected]="book === selectedBook">
+          <h3 matLine>{{ book.title }}</h3>
+          <p matLine>{{ book.author }}</p>
+          <button mat-fab class="book-edit-button" (click)="selectedBook = book">Edit</button>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <app-book-edit [book]="selectedBook" (bookChanged)="saveBook($event)"></app-book-edit>
+  </div>
+</section>

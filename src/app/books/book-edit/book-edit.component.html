@@ -1,0 +1,29 @@
+<div class="book-edit">
+  <div class="book-edit-message" *ngIf="!value">
+    Please select a book.
+  </div>
+  <div class="book-edit-form" *ngIf="!!value">
+    <form [formGroup]="formGroup">
+      <div>
+        <mat-form-field class="editor">
+          <mat-label>Title</mat-label>
+          <input type="text" formControlName="title" matInput>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="editor">
+          <mat-label>Author</mat-label>
+          <input type="text" formControlName="author" matInput>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-icon-button (click)="save()">
+          <mat-icon>save</mat-icon>
+        </button>
+        <button mat-icon-button (click)="updateFormControls()">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
